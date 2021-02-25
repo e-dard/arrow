@@ -18,7 +18,7 @@
 #[cfg(feature = "simd")]
 use crate::util::bit_util;
 #[cfg(feature = "simd")]
-use packed_simd::u8x64;
+use stdsimd::u8x64;
 
 #[cfg(feature = "avx512")]
 use crate::arch::avx512::*;

@@ -16,9 +16,9 @@
 // under the License.
 
 #[cfg(feature = "simd")]
-use packed_simd::*;
-#[cfg(feature = "simd")]
 use std::ops::{Add, BitAnd, BitAndAssign, BitOr, BitOrAssign, Div, Mul, Neg, Not, Sub};
+#[cfg(feature = "simd")]
+use std::simd::*;
 
 use super::*;
 
@@ -451,7 +451,7 @@ mod tests {
         ArrowNumericType, Float32Type, Float64Type, Int32Type, Int64Type, Int8Type,
         UInt16Type,
     };
-    use packed_simd::*;
+    use std::simd::*;
     use FromCast;
 
     /// calculate the expected mask by iterating over all bits

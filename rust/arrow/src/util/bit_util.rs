@@ -18,7 +18,7 @@
 //! Utils for working with bits
 
 #[cfg(feature = "simd")]
-use packed_simd::u8x64;
+use std::simd::u8x64;
 
 const BIT_MASK: [u8; 8] = [1, 2, 4, 8, 16, 32, 64, 128];
 const UNSET_BIT_MASK: [u8; 8] = [
